@@ -1,0 +1,149 @@
+{
+  "settings": {
+    "brandName": "8MOTO",
+    "brandFullName": "8Moto Bharat",
+    "founder": "Sangram Devekar Patil",
+    "headquarters": "Pune, Maharashtra, India",
+    "tagline": "Unleash The Sahyadri Monsoon. Master The Uncharted.",
+    "phone": "+91 98220 8MOTO",
+    "email": "expeditions@8moto.in",
+    "basecamp": "Pune • Western Ghats • 18.5204° N, 73.8567° E",
+    "headMarshal": "Sangram Devekar Patil",
+    "headerLogo": {
+      "type": "text",
+      "text": "8MOTO BHARAT",
+      "subtitle": "PUNE OFFROAD EXPEDITION",
+      "imageUrl": ""
+    },
+    "footerLogo": {
+      "type": "text",
+      "text": "8MOTO BHARAT",
+      "imageUrl": "",
+      "description": "India's premier off-road motorsports expedition collective and riding academy based out of Pune, Maharashtra. Spearheading the annual Pune Offroad Expedition (POE) for 13+ years."
+    },
+    "hero": {
+      "mediaType": "video",
+      "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-motorcyclist-riding-on-a-dirt-road-in-nature-41589-large.mp4",
+      "imageUrl": "/images/hero_monsoon.jpg",
+      "titleLine1": "BORN IN THE",
+      "titleHighlight": "SAHYADRI",
+      "titleLine2": "MONSOON.",
+      "subtitle": "Welcome to 8MOTO BHARAT. Organizers of India's legendary Pune Offroad Expedition (POE). Where dual-sport ADVs, hard enduro machines, and battle-prepped 4x4 rigs tackle extreme clay gullies and uncharted mountain passes.",
+      "editionBadge": "EDITION 14 CONFIRMED",
+      "locationBadge": "LAVASA • MULSHI • SAHYADRI GHATS"
+    },
+    "socials": {
+      "instagram": "https://instagram.com/8moto_bharat",
+      "youtube": "https://youtube.com/@8moto_india",
+      "facebook": "https://facebook.com/8moto.in",
+      "whatsapp": "https://wa.me/919822086686"
+    },
+    "telemetry": [
+      { "value": "14+", "label": "POE Editions Conquered", "sub": "Annual Flagship Since 2012" },
+      { "value": "5,200+", "label": "Kilometers of Raw Trail", "sub": "Sahyadri Rugged Terrain" },
+      { "value": "3,800+", "label": "Riders & Drivers United", "sub": "ADVs, Dirt Bikes & 4x4s" },
+      { "value": "100%", "label": "Marshal & Safety Record", "sub": "Medical & Winch Support" }
+    ],
+    "adminPasswordHash": "8moto2026"
+  },
+  "expeditions": [
+    {
+      "id": "poe-2026",
+      "title": "Pune Offroad Expedition (POE 14)",
+      "tag": "Flagship Annual Raid",
+      "isFlagship": true,
+      "difficulty": "Hard Enduro & Pro 4x4",
+      "difficultyLevel": 3,
+      "location": "Lavasa & Mulshi Valley, Pune",
+      "duration": "2 Days / 1 Night",
+      "elevation": "1,280m Peak",
+      "terrain": "Deep Monsoon Mud, River Boulders, Steep Slicks",
+      "dates": "August 15-16, 2026",
+      "seatsLeft": 24,
+      "image": "/images/poe_expedition.jpg",
+      "videoUrl": "https://assets.mixkit.co/videos/preview/mixkit-motorcyclist-riding-on-a-dirt-road-in-nature-41589-large.mp4",
+      "price": "₹6,499",
+      "category": ["ADV Motorcycle", "Enduro Dirt Bike", "4x4 SUV"],
+      "description": "The crown jewel of Indian off-roading. Tackle severe riverbed boulder crawls, 40-degree red clay slopes, and low-visibility ridge lines surrounded by the raging monsoon.",
+      "stages": [
+        { "name": "Stage 1: The Red Mud Gully", "dist": "18 KM", "terrain": "Clay Ruts & Trench Drops" },
+        { "name": "Stage 2: Boulder Bed Crossing", "dist": "12 KM", "terrain": "Submerged River Rocks" },
+        { "name": "Stage 3: The Fogline Incline", "dist": "22 KM", "terrain": "High-Altitude Mist & Slicks" }
+      ],
+      "gear": ["DOT/ECE Full Face Helmet", "Ankle-Protective MX Boots", "Armored Riding Suit / Jacket", "Recovery Tow Strap (for 4x4)"]
+    },
+    {
+      "id": "sahyadri-ridge-recon",
+      "title": "Sahyadri Mountain Ridge Recon",
+      "tag": "High-Altitude ADV Tour",
+      "isFlagship": false,
+      "difficulty": "Intermediate Dual-Sport",
+      "difficultyLevel": 2,
+      "location": "Bhor & Varandha Ghats",
+      "duration": "Single Day Expedition",
+      "elevation": "1,150m",
+      "terrain": "Broken Tarmac, Loose Scree, Forest Trails",
+      "dates": "September 05, 2026",
+      "seatsLeft": 14,
+      "image": "/images/hero_monsoon.jpg",
+      "videoUrl": "",
+      "price": "₹3,299",
+      "category": ["ADV Motorcycle", "Scrambler"],
+      "description": "An exhilarating trail tracing ancient Maratha fortress ridges. Perfect for ADV riders looking to push past tarmac limitations into technical forest trails.",
+      "stages": [
+        { "name": "Stage 1: Waterfall Pass", "dist": "25 KM", "terrain": "Gravel & Stream Forcing" },
+        { "name": "Stage 2: Fort Ridge Climb", "dist": "19 KM", "terrain": "Loose Shale & Rutted Hairpins" }
+      ],
+      "gear": ["Adventure Touring Boots", "All-Weather Riding Gear", "Hydration Pack (2L)"]
+    },
+    {
+      "id": "konkan-riverbed-cross",
+      "title": "Konkan Rainforest Riverbed Raid",
+      "tag": "Hardcore 4x4 & Enduro",
+      "isFlagship": false,
+      "difficulty": "Hard Enduro & 4x4 Crawl",
+      "difficultyLevel": 3,
+      "location": "Tamhini & Konkan Foothills",
+      "duration": "2 Days Camp Out",
+      "elevation": "890m",
+      "terrain": "Submerged Boulders, Jungle Creeks, Quicksand",
+      "dates": "October 10-11, 2026",
+      "seatsLeft": 8,
+      "image": "/images/poe_expedition.jpg",
+      "videoUrl": "",
+      "price": "₹7,999",
+      "category": ["4x4 SUV", "Enduro Dirt Bike"],
+      "description": "Deep into the dense Western Ghats rainforest. Involves continuous winch recovery, rocky stream navigation, and overnight jungle trail bivouac.",
+      "stages": [
+        { "name": "Stage 1: The Black Water Crossing", "dist": "14 KM", "terrain": "River Bed & Silt" },
+        { "name": "Stage 2: Devil's Staircase", "dist": "16 KM", "terrain": "45° Wet Basalt Steps" }
+      ],
+      "gear": ["Snorkel & Winch (for 4x4)", "Heavy-Duty Mud Boots", "Waterproof Luggage Roll"]
+    },
+    {
+      "id": "trail-scout-intro",
+      "title": "Trail Scout: Fundamentals Safari",
+      "tag": "Beginner & Soft-Roader Friendly",
+      "isFlagship": false,
+      "difficulty": "Novice & Intermediate",
+      "difficultyLevel": 1,
+      "location": "Panshet Backwaters, Pune",
+      "duration": "Single Day Run",
+      "elevation": "750m",
+      "terrain": "Lakeside Mud, Grassy Hills, Light Gravel",
+      "dates": "Every Alternate Sunday",
+      "seatsLeft": 19,
+      "image": "/images/academy_training.jpg",
+      "videoUrl": "",
+      "price": "₹2,199",
+      "category": ["ADV Motorcycle", "Stock 4x4 / AWD"],
+      "description": "The ideal gateway into trail riding. Guided by certified 8Moto marshals, this relaxed expedition teaches throttle control, tire air-down strategies, and safe water crossing.",
+      "stages": [
+        { "name": "Stage 1: Lakeside Drift Ruts", "dist": "20 KM", "terrain": "Grass & Firm Dirt" },
+        { "name": "Stage 2: Splashdown Creek", "dist": "15 KM", "terrain": "Shallow Pebble River" }
+      ],
+      "gear": ["Basic Riding Jacket & Pants", "Sturdy Ankle Boots", "Full Finger Gloves"]
+    }
+  ],
+  "inquiries": []
+}
