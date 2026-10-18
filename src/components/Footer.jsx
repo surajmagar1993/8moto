@@ -55,7 +55,7 @@ export default function Footer({ settings, onOpenAdmin }) {
         </div>
 
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
           
           {/* Brand Info (Col 1-2) */}
           <div className="lg:col-span-2 space-y-4">
@@ -137,26 +137,8 @@ export default function Footer({ settings, onOpenAdmin }) {
               <li>
                 <a href="#expeditions" className="hover:text-[#FF5500] transition-colors">Trail Scout Safari</a>
               </li>
-            </ul>
-          </div>
-
-          {/* Academy & Skills */}
-          <div>
-            <div className="font-mono text-xs font-bold text-white uppercase tracking-wider mb-4">
-              RIDING ACADEMY
-            </div>
-            <ul className="space-y-2.5">
               <li>
-                <a href="#academy" className="hover:text-[#FF5500] transition-colors">Level 1: ADV Dynamics</a>
-              </li>
-              <li>
-                <a href="#academy" className="hover:text-[#FF5500] transition-colors">Level 2: 4x4 Winch Engineering</a>
-              </li>
-              <li>
-                <a href="#academy" className="hover:text-[#FF5500] transition-colors">Level 3: Hard Enduro Pro</a>
-              </li>
-              <li>
-                <a href="#safety" className="hover:text-[#FF5500] transition-colors">Marshal Safety Protocols</a>
+                <a href="#faq" className="hover:text-[#FF5500] transition-colors">Safety Gear & Regulations</a>
               </li>
             </ul>
           </div>

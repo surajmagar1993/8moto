@@ -56,27 +56,17 @@ export default function Navbar({ settings, onOpenAdmin, onOpenExpedition, onPlay
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
-            <a href="#poe-spotlight" className="hover:text-[#FF5500] transition-colors flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+            <a href="#poe-spotlight" className="hover:text-[#FF5500] transition-colors flex items-center gap-1.5">
               <Flame className="w-3.5 h-3.5 text-[#FF5500]" />
               POE Flagship
             </a>
-            <a href="#expeditions" className="hover:text-[#FF5500] transition-colors flex items-center gap-1">
+            <a href="#expeditions" className="hover:text-[#FF5500] transition-colors flex items-center gap-1.5">
               <Compass className="w-3.5 h-3.5 text-slate-400" />
               Expeditions
             </a>
-            <a href="#academy" className="hover:text-[#FF5500] transition-colors">
-              Riding Academy
-            </a>
-            <a href="#safety" className="hover:text-[#FF5500] transition-colors flex items-center gap-1">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-              Safety Fleet
-            </a>
-            <a href="#vault" className="hover:text-[#FF5500] transition-colors">
-              Trail Vault
-            </a>
             <a href="#faq" className="hover:text-[#FF5500] transition-colors">
-              FAQ
+              FAQ & Contact
             </a>
           </nav>
 
@@ -148,27 +138,6 @@ export default function Navbar({ settings, onOpenAdmin, onOpenExpedition, onPlay
               className="text-slate-200 hover:text-[#FF5500] font-medium py-1"
             >
               Expeditions & Trail Matrix
-            </a>
-            <a 
-              href="#academy" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-slate-200 hover:text-[#FF5500] font-medium py-1"
-            >
-              8Moto Off-Road Academy
-            </a>
-            <a 
-              href="#safety" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-slate-200 hover:text-[#FF5500] font-medium py-1"
-            >
-              Safety Fleet & Marshals
-            </a>
-            <a 
-              href="#vault" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-slate-200 hover:text-[#FF5500] font-medium py-1"
-            >
-              Trail Cinema & Vault
             </a>
             <a 
               href="#faq" 

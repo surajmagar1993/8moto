@@ -3,9 +3,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import PoeShowcase from './components/PoeShowcase';
 import TrailMatrix from './components/TrailMatrix';
-import Academy from './components/Academy';
-import SafetyProtocol from './components/SafetyProtocol';
-import MediaVault from './components/MediaVault';
 import FaqSection from './components/FaqSection';
 import Footer from './components/Footer';
 import AdminPanel from './components/AdminPanel';
@@ -152,15 +149,6 @@ export default function App() {
           expeditions={expeditions}
           onOpenExpedition={(exp) => setActiveExpedition(exp)}
         />
-
-        {/* 8Moto Off-Road Academy */}
-        <Academy />
-
-        {/* Safety & Marshalling Infrastructure */}
-        <SafetyProtocol />
-
-        {/* Trail Cinema & Vault */}
-        <MediaVault />
 
         {/* FAQ Section */}
         <FaqSection />
