@@ -75,9 +75,6 @@ export default function Navbar({ settings, onOpenAdmin, onOpenExpedition, onPlay
             <a href="#vault" className="hover:text-[#FF5500] transition-colors">
               Trail Vault
             </a>
-            <a href="#merch" className="hover:text-[#FF5500] transition-colors">
-              Pro Shop
-            </a>
             <a href="#faq" className="hover:text-[#FF5500] transition-colors">
               FAQ
             </a>
@@ -172,13 +169,6 @@ export default function Navbar({ settings, onOpenAdmin, onOpenExpedition, onPlay
               className="text-slate-200 hover:text-[#FF5500] font-medium py-1"
             >
               Trail Cinema & Vault
-            </a>
-            <a 
-              href="#merch" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-slate-200 hover:text-[#FF5500] font-medium py-1"
-            >
-              Pro Shop & Gear
             </a>
             <a 
               href="#faq" 

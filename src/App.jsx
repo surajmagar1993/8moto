@@ -6,7 +6,6 @@ import TrailMatrix from './components/TrailMatrix';
 import Academy from './components/Academy';
 import SafetyProtocol from './components/SafetyProtocol';
 import MediaVault from './components/MediaVault';
-import MerchStore from './components/MerchStore';
 import FaqSection from './components/FaqSection';
 import Footer from './components/Footer';
 import AdminPanel from './components/AdminPanel';
@@ -162,9 +161,6 @@ export default function App() {
 
         {/* Trail Cinema & Vault */}
         <MediaVault />
-
-        {/* Pro Shop & Gear */}
-        <MerchStore />
 
         {/* FAQ Section */}
         <FaqSection />
