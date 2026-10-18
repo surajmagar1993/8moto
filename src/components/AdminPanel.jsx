@@ -128,7 +128,7 @@ export default function AdminPanel({ isOpen, onClose, settings, expeditions, onR
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-xl animate-in fade-in duration-200 overflow-y-auto">
-      <div className="relative w-full max-w-5xl my-auto rounded-3xl bg-[#0B0F17] border border-white/15 shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
+      <div className="relative w-full max-w-6xl xl:max-w-7xl my-auto rounded-3xl bg-[#0B0F17] border border-white/15 shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
         
         {/* Top Title Bar */}
         <div className="px-6 py-4 bg-[#101622] border-b border-white/10 flex items-center justify-between shrink-0">

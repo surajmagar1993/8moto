@@ -5,7 +5,7 @@ import { ACADEMY_COURSES, BRAND_INFO } from '../data/mockData';
 export default function Academy({ onOpenBooking }) {
   return (
     <section id="academy" className="py-24 bg-[#080A0E] relative border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -13,10 +13,10 @@ export default function Academy({ onOpenBooking }) {
             <Award className="w-3.5 h-3.5" />
             PROFESSIONAL OFF-ROAD CLINIC & MASTERCLASSES
           </div>
-          <h2 className="text-4xl sm:text-6xl font-['Bebas_Neue'] text-white tracking-wide uppercase leading-none">
+          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-['Bebas_Neue'] text-white tracking-wide uppercase leading-none">
             8MOTO <span className="text-[#FF5500]">OFF-ROAD ACADEMY</span>
           </h2>
-          <p className="mt-3 text-slate-300 text-base font-light">
+          <p className="mt-3 text-slate-300 text-base sm:text-lg font-light leading-relaxed">
             Stop fearing steep drops, loose gravel, and deep ruts. Our certified master instructors break down the physics of off-road control for ADVs, dirt bikes, and 4x4 overland rigs.
           </p>
         </div>

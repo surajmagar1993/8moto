@@ -25,7 +25,7 @@ export default function Navbar({ settings, onOpenAdmin, onOpenExpedition, onPlay
         ? 'py-3 bg-[#080A0E]/92 backdrop-blur-md border-b border-white/10 shadow-2xl' 
         : 'py-5 bg-gradient-to-b from-[#080A0E]/90 to-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
         <div className="flex items-center justify-between">
           
           {/* Brand Logo & Title */}

@@ -21,7 +21,7 @@ export default function PoeShowcase({ expeditions, onOpenExpedition }) {
       {/* Background radial glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-[#FF5500]/10 rounded-full blur-[140px] pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 border-b border-white/10">
@@ -30,15 +30,15 @@ export default function PoeShowcase({ expeditions, onOpenExpedition }) {
               <Flame className="w-3.5 h-3.5 animate-pulse" />
               FLAGSHIP MONSOON TRADITION • EDITION 14
             </div>
-            <h2 className="text-4xl sm:text-6xl font-['Bebas_Neue'] text-white tracking-wide uppercase leading-none">
+            <h2 className="text-4xl sm:text-6xl lg:text-7xl font-['Bebas_Neue'] text-white tracking-wide uppercase leading-none">
               PUNE OFFROAD EXPEDITION <span className="text-[#FF5500]">(POE)</span>
             </h2>
-            <p className="mt-3 text-slate-300 max-w-2xl text-base font-light">
+            <p className="mt-3 text-slate-300 max-w-2xl text-base sm:text-lg font-light leading-relaxed">
               Founded over a decade ago in Pune by off-road veteran <span className="text-white font-medium">Sangram Devekar Patil</span>, POE is Maharashtra's ultimate monsoon crucible for adventure riders and 4x4 drivers.
             </p>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap sm:flex-nowrap items-center gap-4">
             <div className="bg-[#111622] border border-white/10 px-5 py-3 rounded-xl flex items-center gap-3">
               <Calendar className="w-5 h-5 text-[#FF5500]" />
               <div>
@@ -57,7 +57,7 @@ export default function PoeShowcase({ expeditions, onOpenExpedition }) {
         </div>
 
         {/* Feature Grid */}
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Action Image Showcase (7 Cols) */}
           <div className="lg:col-span-7 relative group">
@@ -65,7 +65,7 @@ export default function PoeShowcase({ expeditions, onOpenExpedition }) {
               <img
                 src={poe.image || '/images/poe_expedition.jpg'}
                 alt="Pune Offroad Expedition Live Action"
-                className="w-full h-[440px] sm:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-[320px] sm:h-[440px] lg:h-[540px] xl:h-[600px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#06080B] via-transparent to-transparent"></div>
               

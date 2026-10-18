@@ -37,7 +37,7 @@ export default function ExpeditionModal({ expedition, isOpen, onClose, whatsappN
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-xl animate-in fade-in duration-200 overflow-y-auto">
-      <div className="relative w-full max-w-4xl my-auto rounded-3xl bg-[#0D121B] border border-white/15 shadow-2xl overflow-hidden max-h-[92vh] flex flex-col">
+      <div className="relative w-full max-w-5xl xl:max-w-6xl my-auto rounded-3xl bg-[#0D121B] border border-white/15 shadow-2xl overflow-hidden max-h-[92vh] flex flex-col">
         
         {/* Header Bar */}
         <div className="px-6 py-4 bg-[#111724] border-b border-white/10 flex items-center justify-between shrink-0">

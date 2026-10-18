@@ -15,7 +15,7 @@ export default function MediaVault() {
 
   return (
     <section id="vault" className="py-24 bg-[#080A0E] relative border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
         
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -24,10 +24,10 @@ export default function MediaVault() {
               <Film className="w-3.5 h-3.5 text-[#FF5500]" />
               RAW TRAIL ARCHIVE & ACTION REELS
             </div>
-            <h2 className="text-4xl sm:text-6xl font-['Bebas_Neue'] text-white tracking-wide uppercase leading-none">
+            <h2 className="text-4xl sm:text-6xl lg:text-7xl font-['Bebas_Neue'] text-white tracking-wide uppercase leading-none">
               TRAIL CINEMA & <span className="text-[#FF5500]">VAULT</span>
             </h2>
-            <p className="mt-2 text-slate-400 text-sm max-w-xl">
+            <p className="mt-2 text-slate-400 text-sm sm:text-base max-w-2xl">
               Thirteen years of mud, river crossings, hill climbs, and brotherhood captured across the Sahyadri mountains.
             </p>
           </div>

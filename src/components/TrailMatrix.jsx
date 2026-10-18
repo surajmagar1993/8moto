@@ -12,7 +12,7 @@ export default function TrailMatrix({ expeditions, onOpenExpedition }) {
 
   return (
     <section id="expeditions" className="py-24 bg-[#06080B] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
         
         {/* Section Heading & Filter Tabs */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -21,10 +21,10 @@ export default function TrailMatrix({ expeditions, onOpenExpedition }) {
               <Compass className="w-3.5 h-3.5 text-[#FF5500]" />
               SAHYADRI & WESTERN GHATS ROUTE MATRIX
             </div>
-            <h2 className="text-4xl sm:text-6xl font-['Bebas_Neue'] text-white tracking-wide uppercase leading-none">
+            <h2 className="text-4xl sm:text-6xl lg:text-7xl font-['Bebas_Neue'] text-white tracking-wide uppercase leading-none">
               EXPEDITIONS & <span className="text-[#FF5500]">TRAILS</span>
             </h2>
-            <p className="mt-2 text-slate-400 text-sm max-w-xl">
+            <p className="mt-2 text-slate-400 text-sm sm:text-base max-w-2xl">
               Curated off-road expeditions graded by technical severity. Every expedition is fully marshalled with mechanical and medical recovery escorts.
             </p>
           </div>
@@ -74,8 +74,8 @@ export default function TrailMatrix({ expeditions, onOpenExpedition }) {
           </div>
         </div>
 
-        {/* Expeditions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Expeditions Grid (1 col on mobile, 2 cols on tablet, 3 on laptops, 4 on wide desktops) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 sm:gap-8">
           {filtered.map((exp) => (
             <div
               key={exp.id}

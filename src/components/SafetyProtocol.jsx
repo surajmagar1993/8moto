@@ -18,7 +18,7 @@ export default function SafetyProtocol() {
 
   return (
     <section id="safety" className="py-24 bg-[#06080B] relative border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
         
         {/* Section Heading */}
         <div className="max-w-3xl mb-16">
@@ -26,10 +26,10 @@ export default function SafetyProtocol() {
             <ShieldCheck className="w-3.5 h-3.5" />
             ZERO COMPROMISE STANDARDS
           </div>
-          <h2 className="text-4xl sm:text-6xl font-['Bebas_Neue'] text-white tracking-wide uppercase leading-none">
+          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-['Bebas_Neue'] text-white tracking-wide uppercase leading-none">
             TRAIL SAFETY & <span className="text-emerald-400">MARSHAL FLEET</span>
           </h2>
-          <p className="mt-3 text-slate-300 text-base font-light">
+          <p className="mt-3 text-slate-300 text-base sm:text-lg font-light leading-relaxed">
             We venture into valleys with zero cellular reception and raging flash streams. Our military-grade safety infrastructure guarantees that every participant returns home safely.
           </p>
         </div>

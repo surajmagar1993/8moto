@@ -38,7 +38,7 @@ export default function Footer({ settings, onOpenAdmin }) {
 
   return (
     <footer className="bg-[#040608] border-t border-white/10 pt-16 pb-12 text-slate-400 text-xs">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
         
         {/* Top Sponsor / Partner Strip */}
         <div className="pb-12 border-b border-white/10 mb-12">

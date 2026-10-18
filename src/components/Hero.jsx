@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flame, Compass, ChevronRight, MapPin, Gauge, Video } from 'lucide-react';
+import { Flame, Compass, ChevronRight, MapPin, Gauge, Video, Sparkles } from 'lucide-react';
 
 export default function Hero({ settings, onOpenExpedition, onPlayRev }) {
   const hero = settings?.hero || {
@@ -22,9 +22,10 @@ export default function Hero({ settings, onOpenExpedition, onPlayRev }) {
   ];
 
   return (
-    <section className="relative min-h-[92vh] flex items-center pt-28 pb-16 overflow-hidden">
-      {/* Background Media: Video or Image */}
-      <div className="absolute inset-0 z-0">
+    <section className="relative min-h-screen min-h-[100dvh] w-full flex flex-col justify-between pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-12 overflow-hidden">
+      
+      {/* Edge-to-Edge Background Media (Full-Screen Immersive) */}
+      <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
         {hero.mediaType === 'video' && hero.videoUrl ? (
           <video
             src={hero.videoUrl}
@@ -33,118 +34,125 @@ export default function Hero({ settings, onOpenExpedition, onPlayRev }) {
             muted
             playsInline
             poster={hero.imageUrl || '/images/hero_monsoon.jpg'}
-            className="w-full h-full object-cover object-center transform scale-105"
+            className="w-full h-full object-cover object-center scale-[1.02]"
           />
         ) : (
           <img
             src={hero.imageUrl || '/images/hero_monsoon.jpg'}
             alt="8Moto Sahyadri Off-road Expedition"
-            className="w-full h-full object-cover object-center transform scale-105"
+            className="w-full h-full object-cover object-center scale-[1.02]"
           />
         )}
         
-        {/* Dark Vignette & Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#06080B] via-[#06080B]/80 to-[#06080B]/50"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#06080B] via-[#06080B]/75 to-transparent"></div>
+        {/* Cinematic Vignette & Gradient Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#06080B] via-[#06080B]/70 to-[#06080B]/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#06080B] via-[#06080B]/80 to-transparent"></div>
         <div className="absolute inset-0 carbon-grid opacity-20 pointer-events-none"></div>
 
         {/* Video Mode Indicator */}
         {hero.mediaType === 'video' && hero.videoUrl && (
-          <div className="absolute bottom-6 right-6 hidden md:flex items-center gap-2 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-mono text-slate-400">
+          <div className="absolute top-28 right-6 lg:right-12 hidden md:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-mono text-slate-300">
             <span className="w-2 h-2 rounded-full bg-[#FF5500] animate-ping"></span>
-            <Video className="w-3 h-3 text-[#FF5500]" />
-            <span>LIVE TRAIL CINEMA BACKGROUND</span>
+            <Video className="w-3.5 h-3.5 text-[#FF5500]" />
+            <span>TRAIL CINEMA ACTIVE</span>
           </div>
         )}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="max-w-3xl">
+      {/* Main Full-Width Centered Content */}
+      <div className="relative z-10 w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 flex-1 flex flex-col justify-center my-auto">
+        <div className="max-w-4xl xl:max-w-5xl">
           
           {/* Live Telemetry Pill */}
-          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-xs font-mono mb-6">
+          <div className="inline-flex items-center gap-2.5 px-3 sm:px-4 py-1.5 rounded-full bg-black/50 backdrop-blur-md border border-white/15 text-xs font-mono mb-4 sm:mb-6 shadow-xl">
             <span className="w-2 h-2 rounded-full bg-[#FF5500] animate-ping"></span>
-            <span className="text-[#FF5500] font-bold">{hero.editionBadge || 'EDITION 14 CONFIRMED'}</span>
-            <span className="text-slate-400">|</span>
-            <span className="text-slate-300 flex items-center gap-1">
-              <MapPin className="w-3 h-3 text-slate-400" />
-              {hero.locationBadge || 'LAVASA • MULSHI • SAHYADRI GHATS'}
+            <span className="text-[#FF5500] font-bold tracking-wider">{hero.editionBadge || 'EDITION 14 CONFIRMED'}</span>
+            <span className="text-slate-500">|</span>
+            <span className="text-slate-300 flex items-center gap-1.5 truncate">
+              <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+              <span>{hero.locationBadge || 'LAVASA • MULSHI • SAHYADRI GHATS'}</span>
             </span>
           </div>
 
-          {/* Main Hero Headline */}
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-['Bebas_Neue'] tracking-tight text-white uppercase leading-[0.9] drop-shadow-2xl">
+          {/* Scalable Responsive Headline */}
+          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-['Bebas_Neue'] tracking-tight text-white uppercase leading-[0.88] drop-shadow-2xl">
             {hero.titleLine1 || 'BORN IN THE'}{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF5500] via-[#FF6E1A] to-[#F59E0B]">
               {hero.titleHighlight || 'SAHYADRI'}
-            </span>{' '}
+            </span>
+            <br />
             {hero.titleLine2 || 'MONSOON.'}
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-slate-300 font-light leading-relaxed max-w-2xl">
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-slate-200 font-light leading-relaxed max-w-3xl drop-shadow">
             {hero.subtitle}
           </p>
 
-          {/* Action CTAs (Claim Trail Pass removed, replaced with Explore / Details) */}
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          {/* Action CTAs */}
+          <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
             <a
               href="#poe-spotlight"
-              className="px-8 py-4 rounded-xl bg-[#FF5500] hover:bg-[#FF6E1A] text-white font-bold tracking-wide shadow-xl shadow-[#FF5500]/30 hover:shadow-[#FF5500]/50 hover:-translate-y-0.5 transition-all cursor-pointer flex items-center gap-3 text-base group"
+              className="px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-[#FF5500] hover:bg-[#FF6E1A] text-white font-bold tracking-wide shadow-xl shadow-[#FF5500]/30 hover:shadow-[#FF5500]/50 hover:-translate-y-0.5 transition-all cursor-pointer flex items-center gap-2.5 text-sm sm:text-base group"
             >
-              <Flame className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <Flame className="w-4 sm:w-5 h-4 sm:h-5 group-hover:scale-110 transition-transform" />
               <span>EXPLORE POE 2026</span>
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
 
             <a
               href="#expeditions"
-              className="px-7 py-4 rounded-xl bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/15 hover:border-white/30 text-white font-semibold transition-all cursor-pointer flex items-center gap-2 text-base hover:-translate-y-0.5"
+              className="px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/20 hover:border-white/40 text-white font-semibold transition-all cursor-pointer flex items-center gap-2 text-sm sm:text-base hover:-translate-y-0.5"
             >
-              <Compass className="w-5 h-5 text-slate-300" />
-              <span>TRAILS & ACADEMY</span>
+              <Compass className="w-4 sm:w-5 h-4 sm:h-5 text-slate-300" />
+              <span>TRAILS & EXPEDITIONS</span>
             </a>
 
             <button
               onClick={onPlayRev}
-              className="px-4 py-4 rounded-xl bg-[#161D2C]/80 border border-white/10 hover:border-[#FF5500]/50 text-slate-300 hover:text-white transition-all cursor-pointer flex items-center gap-2 text-sm font-mono"
+              className="px-4 py-3.5 sm:py-4 rounded-xl bg-[#161D2C]/90 backdrop-blur-md border border-white/10 hover:border-[#FF5500]/50 text-slate-300 hover:text-white transition-all cursor-pointer flex items-center gap-2 text-xs sm:text-sm font-mono"
               title="Test engine throttle audio sound"
             >
               <Gauge className="w-4 h-4 text-[#FF5500]" />
-              <span className="hidden sm:inline">REV ENGINE</span>
+              <span className="hidden sm:inline">REV THROTTLE</span>
             </button>
           </div>
 
-          {/* Badges / Vehicle Classes */}
-          <div className="mt-8 flex flex-wrap items-center gap-3 text-xs text-slate-400 font-mono">
-            <span className="text-slate-500 uppercase tracking-wider">Trail Machines:</span>
-            <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-slate-300">
-              🏍️ ADV & Enduro (KTM, Himalayan, GS, Xpulse)
+          {/* Machine Eligibility Chips */}
+          <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-2 sm:gap-3 text-xs text-slate-300 font-mono">
+            <span className="text-slate-400 uppercase tracking-wider text-[11px]">Eligible Rigs:</span>
+            <span className="px-3 py-1 rounded-lg bg-black/40 backdrop-blur-sm border border-white/10">
+              🏍️ ADVs & Enduro (KTM, Himalayan, GS, Xpulse)
             </span>
-            <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-slate-300">
-              🚙 4x4 SUVs (Thar, Gypsy, Jimny, Hilux)
+            <span className="px-3 py-1 rounded-lg bg-black/40 backdrop-blur-sm border border-white/10">
+              🚙 4x4 Off-Road (Thar, Gypsy, Jimny, Hilux)
             </span>
           </div>
 
         </div>
+      </div>
 
-        {/* Telemetry Stats Bar */}
-        <div className="mt-14 pt-8 border-t border-white/10 grid grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Pinned Telemetry Stats Bar (Fully Responsive Across All Devices) */}
+      <div className="relative z-10 w-full max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 mt-6 sm:mt-10">
+        <div className="pt-6 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 lg:gap-8">
           {telemetry.map((stat, idx) => (
-            <div key={idx} className="relative group">
-              <div className="font-['Bebas_Neue'] text-4xl sm:text-5xl text-white tracking-wider flex items-baseline gap-1 group-hover:text-[#FF5500] transition-colors">
+            <div 
+              key={idx} 
+              className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-black/30 backdrop-blur-md border border-white/5 hover:border-[#FF5500]/30 transition-all group"
+            >
+              <div className="font-['Bebas_Neue'] text-3xl sm:text-5xl lg:text-6xl text-white tracking-wider flex items-baseline gap-1 group-hover:text-[#FF5500] transition-colors leading-none">
                 {stat.value}
               </div>
-              <div className="text-sm font-semibold text-slate-200 mt-0.5">
+              <div className="text-xs sm:text-sm font-semibold text-slate-200 mt-1 sm:mt-1.5">
                 {stat.label}
               </div>
-              <div className="text-xs text-slate-400 font-mono mt-0.5">
+              <div className="text-[10px] sm:text-xs text-slate-400 font-mono mt-0.5 truncate">
                 {stat.sub}
               </div>
             </div>
           ))}
         </div>
-
       </div>
+
     </section>
   );
 }
