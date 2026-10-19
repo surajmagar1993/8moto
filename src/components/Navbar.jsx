@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Volume2, Menu, X, Flame, ShieldCheck, Compass, Lock, MessageSquare } from 'lucide-react';
+import { Menu, X, Compass, Flame, Shield, Wrench, GraduationCap, MessageSquare, Ticket } from 'lucide-react';
 
-export default function Navbar({ settings, onOpenAdmin, onOpenExpedition, onPlayRev }) {
+export default function Navbar({ settings, onOpenRegistration }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -15,106 +15,102 @@ export default function Navbar({ settings, onOpenAdmin, onOpenExpedition, onPlay
 
   const headerLogo = settings?.headerLogo || {
     text: '8MOTO BHARAT',
-    subtitle: 'PUNE OFFROAD EXPEDITION',
+    subtitle: 'EXPEDITIONS & RIDING ACADEMY • PUNE',
     imageUrl: ''
   };
 
+  const whatsappUrl = settings?.socials?.whatsapp || 'https://wa.me/919822086686';
+
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className={`sticky top-0 left-0 right-0 z-50 transition-all duration-200 border-b ${
       scrolled 
-        ? 'py-3 bg-[#080A0E]/92 backdrop-blur-md border-b border-white/10 shadow-2xl' 
-        : 'py-5 bg-gradient-to-b from-[#080A0E]/90 to-transparent'
+        ? 'bg-[#07090E]/95 backdrop-blur-md border-white/10 shadow-2xl py-3' 
+        : 'bg-[#07090E]/80 backdrop-blur-sm border-white/5 py-4'
     }`}>
-      <div className="max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
+      <div className="max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex items-center justify-between">
           
-          {/* Brand Logo & Title */}
-          <a href="#" className="flex items-center gap-3 group cursor-pointer">
-            {headerLogo.imageUrl ? (
-              <img
-                src={headerLogo.imageUrl}
-                alt={headerLogo.text}
-                className="h-10 w-auto object-contain"
-              />
-            ) : (
-              <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF5500] to-[#B33600] flex items-center justify-center font-black text-2xl tracking-tighter text-white shadow-lg group-hover:scale-105 transition-transform">
-                <span className="font-['Bebas_Neue'] text-3xl">8</span>
-                <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-white rounded-full flex items-center justify-center">
-                  <div className="w-1.5 h-1.5 bg-[#FF5500] rounded-full animate-ping"></div>
-                </div>
-              </div>
-            )}
+          {/* Brand Logo & Editorial Title */}
+          <a href="#" className="flex items-center gap-3.5 group cursor-pointer">
+            <div className="w-10 h-10 rounded-lg bg-[#FF4D00] flex items-center justify-center font-['Bebas_Neue'] text-3xl text-white tracking-wider shadow-md shadow-[#FF4D00]/25 group-hover:bg-[#FF661A] transition-colors">
+              8M
+            </div>
 
             <div className="flex flex-col">
-              <span className="font-['Bebas_Neue'] text-3xl tracking-wider text-white leading-none flex items-center gap-1.5">
+              <span className="font-['Bebas_Neue'] text-2xl sm:text-3xl tracking-wider text-white leading-none">
                 {headerLogo.text || '8MOTO BHARAT'}
               </span>
-              <span className="text-[10px] tracking-widest uppercase text-slate-400 font-mono font-medium">
-                {headerLogo.subtitle || 'PUNE OFFROAD EXPEDITION'}
+              <span className="text-[10px] tracking-widest uppercase text-slate-400 font-mono font-semibold mt-0.5">
+                {headerLogo.subtitle || 'EXPEDITIONS & ACADEMY • PUNE'}
               </span>
             </div>
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
-            <a href="#poe-spotlight" className="hover:text-[#FF5500] transition-colors flex items-center gap-1.5">
-              <Flame className="w-3.5 h-3.5 text-[#FF5500]" />
-              POE Flagship
+          <nav className="hidden xl:flex items-center gap-7 text-xs font-mono font-semibold tracking-wider text-slate-300 uppercase">
+            <a href="#poe-spotlight" className="hover:text-[#FF4D00] transition-colors flex items-center gap-1.5 py-1">
+              <Flame className="w-3.5 h-3.5 text-[#FF4D00]" />
+              <span>POE 14 RAID</span>
             </a>
-            <a href="#expeditions" className="hover:text-[#FF5500] transition-colors flex items-center gap-1.5">
+            <a href="#expeditions" className="hover:text-[#FF4D00] transition-colors flex items-center gap-1.5 py-1">
               <Compass className="w-3.5 h-3.5 text-slate-400" />
-              Expeditions
+              <span>TRAIL MATRIX</span>
             </a>
-            <a href="#faq" className="hover:text-[#FF5500] transition-colors">
-              FAQ & Contact
+            <a href="#academy" className="hover:text-[#FF4D00] transition-colors flex items-center gap-1.5 py-1">
+              <GraduationCap className="w-3.5 h-3.5 text-slate-400" />
+              <span>ACADEMY</span>
+            </a>
+            <a href="#safety" className="hover:text-[#FF4D00] transition-colors flex items-center gap-1.5 py-1">
+              <Shield className="w-3.5 h-3.5 text-slate-400" />
+              <span>SAFETY & SWEEPS</span>
+            </a>
+            <a href="#rig-prep" className="hover:text-[#FF4D00] transition-colors flex items-center gap-1.5 py-1">
+              <Wrench className="w-3.5 h-3.5 text-slate-400" />
+              <span>RIG PREP</span>
+            </a>
+            <a href="#founder" className="hover:text-[#FF4D00] transition-colors py-1">
+              <span>FOUNDER</span>
+            </a>
+            <a href="#faq" className="hover:text-[#FF4D00] transition-colors py-1">
+              <span>FAQ</span>
             </a>
           </nav>
 
           {/* Action CTAs */}
           <div className="hidden sm:flex items-center gap-3">
-            {/* Audio Throttle Easter Egg */}
-            <button
-              onClick={onPlayRev}
-              title="Click to rev engine throttle!"
-              className="p-2.5 rounded-xl bg-white/5 hover:bg-[#FF5500]/20 border border-white/10 hover:border-[#FF5500]/40 text-slate-300 hover:text-[#FF5500] transition-all cursor-pointer flex items-center gap-1.5 text-xs font-mono"
-            >
-              <Volume2 className="w-4 h-4 text-[#FF5500] animate-pulse" />
-              <span className="hidden xl:inline">REV THROTTLE</span>
-            </button>
-
             {/* Quick WhatsApp Inquiry */}
             <a
-              href={settings?.socials?.whatsapp || 'https://wa.me/919822086686'}
+              href={whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-mono text-xs font-semibold tracking-wide border border-white/10 transition-all flex items-center gap-2"
+              className="px-3.5 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-200 hover:text-white font-mono text-xs font-semibold tracking-wide border border-white/10 transition-all flex items-center gap-2 cursor-pointer"
             >
               <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
-              <span>INQUIRE</span>
+              <span>MARSHAL DESK</span>
             </a>
 
-            {/* Backend Admin Button */}
+            {/* Official Entry Pass Trigger */}
             <button
-              onClick={onOpenAdmin}
-              className="px-3 py-2.5 rounded-xl bg-[#161D2C] hover:bg-[#FF5500] border border-white/10 hover:border-[#FF5500] text-slate-300 hover:text-white transition-all cursor-pointer flex items-center gap-1.5 text-xs font-mono"
-              title="Open Backend Admin Panel"
+              onClick={onOpenRegistration}
+              className="px-4 py-2 rounded-lg bg-[#FF4D00] hover:bg-[#FF661A] text-white font-mono text-xs font-bold uppercase tracking-wider shadow-lg shadow-[#FF4D00]/25 transition-all cursor-pointer flex items-center gap-2"
             >
-              <Lock className="w-3.5 h-3.5 text-[#FF5500] hover:text-white" />
-              <span>ADMIN</span>
+              <Ticket className="w-3.5 h-3.5" />
+              <span>RESERVE TRAIL SLOT</span>
             </button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex sm:hidden items-center gap-2">
+          <div className="flex xl:hidden items-center gap-2">
             <button
-              onClick={onOpenAdmin}
-              className="p-2 rounded-lg bg-white/5 border border-white/10 text-xs font-mono text-slate-300"
+              onClick={onOpenRegistration}
+              className="px-3 py-1.5 rounded-lg bg-[#FF4D00] text-white text-xs font-mono font-bold"
             >
-              <Lock className="w-4 h-4 text-[#FF5500]" />
+              ENTRY PASS
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg bg-white/5 border border-white/10 text-white"
+              className="p-2 rounded-lg bg-white/5 border border-white/10 text-white cursor-pointer"
+              aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -124,40 +120,83 @@ export default function Navbar({ settings, onOpenAdmin, onOpenExpedition, onPlay
 
         {/* Mobile dropdown */}
         {mobileMenuOpen && (
-          <div className="lg:hidden mt-4 p-5 rounded-2xl bg-[#0E121A] border border-white/10 shadow-2xl flex flex-col gap-4 animate-in fade-in duration-200">
+          <div className="xl:hidden mt-3 p-5 rounded-2xl bg-[#0C1017] border border-white/10 shadow-2xl flex flex-col gap-3.5 font-mono text-xs animate-in fade-in duration-200">
             <a 
               href="#poe-spotlight" 
               onClick={() => setMobileMenuOpen(false)}
-              className="text-slate-200 hover:text-[#FF5500] font-medium py-1"
+              className="text-white hover:text-[#FF4D00] py-1.5 flex items-center gap-2"
             >
-              Pune Offroad Expedition (POE)
+              <Flame className="w-4 h-4 text-[#FF4D00]" />
+              <span>POE 14 Annual Raid (August 15–16)</span>
             </a>
             <a 
               href="#expeditions" 
               onClick={() => setMobileMenuOpen(false)}
-              className="text-slate-200 hover:text-[#FF5500] font-medium py-1"
+              className="text-slate-300 hover:text-[#FF4D00] py-1.5 flex items-center gap-2"
             >
-              Expeditions & Trail Matrix
+              <Compass className="w-4 h-4 text-slate-400" />
+              <span>Expeditions & Trail Matrix</span>
+            </a>
+            <a 
+              href="#academy" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-slate-300 hover:text-[#FF4D00] py-1.5 flex items-center gap-2"
+            >
+              <GraduationCap className="w-4 h-4 text-slate-400" />
+              <span>8Moto Riding & 4x4 Academy</span>
+            </a>
+            <a 
+              href="#safety" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-slate-300 hover:text-[#FF4D00] py-1.5 flex items-center gap-2"
+            >
+              <Shield className="w-4 h-4 text-slate-400" />
+              <span>Safety, Winch & Paramedic Sweep</span>
+            </a>
+            <a 
+              href="#rig-prep" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-slate-300 hover:text-[#FF4D00] py-1.5 flex items-center gap-2"
+            >
+              <Wrench className="w-4 h-4 text-slate-400" />
+              <span>Rig Prep & Tire PSI Guide</span>
+            </a>
+            <a 
+              href="#founder" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-slate-300 hover:text-[#FF4D00] py-1.5"
+            >
+              Founder & Trail Heritage
             </a>
             <a 
               href="#faq" 
               onClick={() => setMobileMenuOpen(false)}
-              className="text-slate-200 hover:text-[#FF5500] font-medium py-1"
+              className="text-slate-300 hover:text-[#FF4D00] py-1.5"
             >
-              FAQ & Regulations
+              Trail Regulations & FAQ
             </a>
             
-            <div className="pt-2 border-t border-white/10 flex items-center justify-between">
+            <div className="pt-3 border-t border-white/10 flex flex-col gap-2">
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
-                  onOpenAdmin();
+                  onOpenRegistration();
                 }}
-                className="w-full py-2.5 rounded-xl bg-white/10 hover:bg-[#FF5500] text-center font-mono text-xs font-bold text-white flex items-center justify-center gap-2"
+                className="w-full py-3 rounded-xl bg-[#FF4D00] text-center font-bold text-white uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer"
               >
-                <Lock className="w-3.5 h-3.5" />
-                <span>OPEN BACKEND ADMIN</span>
+                <Ticket className="w-4 h-4" />
+                <span>RESERVE OFFICIAL TRAIL PASS</span>
               </button>
+
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-center font-bold text-white flex items-center justify-center gap-2"
+              >
+                <MessageSquare className="w-4 h-4" />
+                <span>CHAT WITH TRAIL MARSHAL</span>
+              </a>
             </div>
           </div>
         )}

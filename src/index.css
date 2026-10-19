@@ -6,86 +6,108 @@
   --font-sans: "Plus Jakarta Sans", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  --color-asphalt-950: #06080B;
+  --color-asphalt-950: #07090E;
   --color-asphalt-900: #0C1017;
   --color-asphalt-850: #101520;
-  --color-asphalt-800: #161D2C;
-  --color-asphalt-700: #222B3D;
+  --color-asphalt-800: #161D2B;
+  --color-asphalt-700: #1F283B;
   --color-asphalt-600: #334155;
 
-  --color-blaze-500: #FF5500;
-  --color-blaze-400: #FF6E1A;
-  --color-blaze-600: #E04600;
-  --color-amber-trail: #F59E0B;
+  --color-blaze-500: #FF4D00;
+  --color-blaze-400: #FF661A;
+  --color-blaze-600: #D93E00;
+  --color-sand-400: #E2D9C8;
   --color-trail-green: #10B981;
 }
 
 /* Custom Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-sans), sans-serif;
-  background-color: #06080B;
-  color: #F8FAFC;
+  background-color: #07090E;
+  color: #F1F5F9;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Scrollbar */
+/* Custom Tactical Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #06080B;
+  background: #07090E;
 }
 ::-webkit-scrollbar-thumb {
-  background: #222B3D;
-  border-radius: 4px;
+  background: #1F283B;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #FF5500;
+  background: #FF4D00;
 }
 
-/* Glow effects */
-.glow-orange {
-  box-shadow: 0 0 35px -5px rgba(255, 85, 0, 0.35);
+/* Topographic Contour Overlay */
+.topo-pattern {
+  background-image: radial-gradient(rgba(255, 77, 0, 0.04) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
 }
 
-.glow-orange-subtle {
-  box-shadow: 0 0 20px -3px rgba(255, 85, 0, 0.2);
-}
-
-.glow-border {
-  border-color: rgba(255, 85, 0, 0.5);
-  box-shadow: inset 0 0 15px rgba(255, 85, 0, 0.15), 0 0 15px rgba(255, 85, 0, 0.2);
-}
-
-/* Glassmorphism */
-.glass-panel {
-  background: rgba(14, 18, 26, 0.78);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.glass-card {
-  background: rgba(16, 21, 32, 0.65);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.glass-card:hover {
-  border-color: rgba(255, 85, 0, 0.4);
-  background: rgba(22, 29, 44, 0.85);
-  transform: translateY(-4px);
-}
-
-/* Subtle carbon fiber pattern */
-.carbon-grid {
+/* Subtle Rally Grid */
+.rally-grid {
   background-image: 
     linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 32px 32px;
+  background-size: 48px 48px;
 }
 
-.topo-pattern {
-  background-image: radial-gradient(circle at 50% 50%, rgba(255, 85, 0, 0.08) 0%, transparent 60%);
+/* Tactile Rally Dossier Card */
+.rally-card {
+  background: #0E131C;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rally-card:hover {
+  border-color: rgba(255, 77, 0, 0.4);
+  box-shadow: 0 14px 40px -10px rgba(0, 0, 0, 0.7);
+}
+
+/* Tactical Corner Notches */
+.corner-notch {
+  position: relative;
+}
+.corner-notch::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #FF4D00;
+  border-left: 2px solid #FF4D00;
+  pointer-events: none;
+}
+.corner-notch::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid #FF4D00;
+  border-right: 2px solid #FF4D00;
+  pointer-events: none;
+}
+
+/* Stencil Stamp */
+.stencil-badge {
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-weight: 700;
 }

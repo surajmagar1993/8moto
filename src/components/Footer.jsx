@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flame, MapPin, Phone, Mail, ShieldCheck, Lock } from 'lucide-react';
+import { MapPin, Phone, Mail, Lock } from 'lucide-react';
 
 const InstagramIcon = ({ className }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -26,7 +26,7 @@ export default function Footer({ settings, onOpenAdmin }) {
   const footerLogo = settings?.footerLogo || {
     text: '8MOTO BHARAT',
     imageUrl: '',
-    description: "India's premier off-road motorsports expedition collective and riding academy based out of Pune, Maharashtra. Spearheading the annual Pune Offroad Expedition (POE) for 13+ years."
+    description: "India's premier off-road motorsports expedition collective and riding academy based out of Pune, Maharashtra. Spearheading the annual Pune Offroad Expedition (POE) for 14 unbroken years."
   };
 
   const socials = settings?.socials || {
@@ -37,47 +37,43 @@ export default function Footer({ settings, onOpenAdmin }) {
   };
 
   return (
-    <footer className="bg-[#040608] border-t border-white/10 pt-16 pb-12 text-slate-400 text-xs">
-      <div className="max-w-[1720px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
+    <footer className="bg-[#05070B] border-t border-white/10 pt-16 pb-12 text-slate-400 text-xs font-mono">
+      <div className="max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-12">
         
-        {/* Top Sponsor / Partner Strip */}
+        {/* Top Motorsports Partner Strip */}
         <div className="pb-12 border-b border-white/10 mb-12">
-          <div className="text-[10px] font-mono uppercase tracking-widest text-slate-400 text-center mb-6">
-            SUPPORTED BY MOTORSPORTS & OFF-ROAD PARTNERS
+          <div className="text-[10px] uppercase tracking-widest text-slate-400 text-center mb-6">
+            SUPPORTED BY OFF-ROAD & MOTORSPORTS ALLIES
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14 opacity-75 grayscale hover:grayscale-0 transition-all">
-            <span className="font-['Bebas_Neue'] text-2xl tracking-widest text-white">CEAT SPECIALTY</span>
-            <span className="font-['Bebas_Neue'] text-2xl tracking-widest text-white">MAXXIS TIRES</span>
-            <span className="font-['Bebas_Neue'] text-2xl tracking-widest text-[#FF5500]">WARN WINCH</span>
-            <span className="font-['Bebas_Neue'] text-2xl tracking-widest text-white">MOTUL LUBRICANTS</span>
-            <span className="font-['Bebas_Neue'] text-2xl tracking-widest text-white">KTM ADVENTURE</span>
+          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14 opacity-80">
+            <span className="font-['Bebas_Neue'] text-2xl tracking-widest text-slate-300 hover:text-white transition-colors">CEAT SPECIALTY</span>
+            <span className="font-['Bebas_Neue'] text-2xl tracking-widest text-slate-300 hover:text-white transition-colors">MAXXIS TIRES</span>
+            <span className="font-['Bebas_Neue'] text-2xl tracking-widest text-[#FF4D00]">WARN WINCH</span>
+            <span className="font-['Bebas_Neue'] text-2xl tracking-widest text-slate-300 hover:text-white transition-colors">MOTUL LUBRICANTS</span>
+            <span className="font-['Bebas_Neue'] text-2xl tracking-widest text-slate-300 hover:text-white transition-colors">KTM ADVENTURE</span>
           </div>
         </div>
 
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10 font-sans">
           
           {/* Brand Info (Col 1-2) */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              {footerLogo.imageUrl ? (
-                <img src={footerLogo.imageUrl} alt={footerLogo.text} className="h-9 w-auto object-contain" />
-              ) : (
-                <div className="w-9 h-9 rounded-xl bg-[#FF5500] flex items-center justify-center font-['Bebas_Neue'] text-2xl text-white">
-                  8
-                </div>
-              )}
+              <div className="w-9 h-9 rounded-lg bg-[#FF4D00] flex items-center justify-center font-['Bebas_Neue'] text-2xl text-white">
+                8M
+              </div>
               <span className="font-['Bebas_Neue'] text-3xl tracking-wider text-white">
                 {footerLogo.text || '8MOTO BHARAT'}
               </span>
             </div>
             
-            <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
+            <p className="text-slate-300 text-xs leading-relaxed max-w-sm font-light">
               {footerLogo.description}
             </p>
 
-            <div className="flex items-center gap-3 text-xs font-mono text-slate-400 pt-1">
-              <MapPin className="w-4 h-4 text-[#FF5500] shrink-0" />
+            <div className="flex items-center gap-2 text-xs font-mono text-slate-400 pt-1">
+              <MapPin className="w-4 h-4 text-[#FF4D00] shrink-0" />
               <span>{settings?.basecamp || 'Basecamp: Pune • Western Ghats • 18.5204° N, 73.8567° E'}</span>
             </div>
 
@@ -88,7 +84,7 @@ export default function Footer({ settings, onOpenAdmin }) {
                   href={socials.instagram}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-8 h-8 rounded-lg bg-white/5 hover:bg-[#FF5500] flex items-center justify-center text-slate-300 hover:text-white transition-colors"
+                  className="w-8 h-8 rounded-lg bg-white/5 hover:bg-[#FF4D00] flex items-center justify-center text-slate-300 hover:text-white transition-colors"
                   title="8Moto Instagram"
                 >
                   <InstagramIcon className="w-4 h-4" />
@@ -99,7 +95,7 @@ export default function Footer({ settings, onOpenAdmin }) {
                   href={socials.youtube}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-8 h-8 rounded-lg bg-white/5 hover:bg-[#FF5500] flex items-center justify-center text-slate-300 hover:text-white transition-colors"
+                  className="w-8 h-8 rounded-lg bg-white/5 hover:bg-[#FF4D00] flex items-center justify-center text-slate-300 hover:text-white transition-colors"
                   title="8Moto YouTube"
                 >
                   <YoutubeIcon className="w-4 h-4" />
@@ -110,7 +106,7 @@ export default function Footer({ settings, onOpenAdmin }) {
                   href={socials.facebook}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-8 h-8 rounded-lg bg-white/5 hover:bg-[#FF5500] flex items-center justify-center text-slate-300 hover:text-white transition-colors"
+                  className="w-8 h-8 rounded-lg bg-white/5 hover:bg-[#FF4D00] flex items-center justify-center text-slate-300 hover:text-white transition-colors"
                   title="8Moto Facebook"
                 >
                   <FacebookIcon className="w-4 h-4" />
@@ -119,26 +115,29 @@ export default function Footer({ settings, onOpenAdmin }) {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Navigation Links */}
           <div>
             <div className="font-mono text-xs font-bold text-white uppercase tracking-wider mb-4">
-              EXPEDITIONS
+              EXPEDITIONS & ACADEMY
             </div>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2.5 text-xs text-slate-300">
               <li>
-                <a href="#poe-spotlight" className="hover:text-[#FF5500] transition-colors">Pune Offroad Expedition (POE)</a>
+                <a href="#poe-spotlight" className="hover:text-[#FF4D00] transition-colors">Pune Offroad Expedition (POE 14)</a>
               </li>
               <li>
-                <a href="#expeditions" className="hover:text-[#FF5500] transition-colors">Sahyadri Ridge Recon</a>
+                <a href="#expeditions" className="hover:text-[#FF4D00] transition-colors">Sahyadri Mountain Ridge Recon</a>
               </li>
               <li>
-                <a href="#expeditions" className="hover:text-[#FF5500] transition-colors">Konkan Riverbed Raid</a>
+                <a href="#expeditions" className="hover:text-[#FF4D00] transition-colors">Konkan Riverbed Raid</a>
               </li>
               <li>
-                <a href="#expeditions" className="hover:text-[#FF5500] transition-colors">Trail Scout Safari</a>
+                <a href="#academy" className="hover:text-[#FF4D00] transition-colors">ADV Motorcycle Dynamics (Level 1)</a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-[#FF5500] transition-colors">Safety Gear & Regulations</a>
+                <a href="#academy" className="hover:text-[#FF4D00] transition-colors">4x4 Winch Engineering (Level 2)</a>
+              </li>
+              <li>
+                <a href="#rig-prep" className="hover:text-[#FF4D00] transition-colors">Machine Setup & Tire PSI Guide</a>
               </li>
             </ul>
           </div>
@@ -146,44 +145,46 @@ export default function Footer({ settings, onOpenAdmin }) {
           {/* Contact & Support */}
           <div>
             <div className="font-mono text-xs font-bold text-white uppercase tracking-wider mb-4">
-              EXPEDITION DESK
+              MARSHAL DESK
             </div>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2.5 text-xs text-slate-300">
               <li className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-[#FF5500]" />
-                <span>{settings?.phone || '+91 98220 8MOTO'}</span>
+                <Phone className="w-3.5 h-3.5 text-[#FF4D00]" />
+                <span className="font-mono">{settings?.phone || '+91 98220 8MOTO'}</span>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-[#FF5500]" />
-                <span>{settings?.email || 'expeditions@8moto.in'}</span>
+                <Mail className="w-3.5 h-3.5 text-[#FF4D00]" />
+                <span className="font-mono">{settings?.email || 'expeditions@8moto.in'}</span>
               </li>
               <li className="pt-2">
-                <div className="text-[11px] text-slate-400">Head Marshal:</div>
+                <div className="text-[11px] text-slate-400 font-mono">Head Marshal:</div>
                 <div className="text-white font-medium">{settings?.headMarshal || 'Sangram Devekar Patil'}</div>
               </li>
-              <li className="pt-2">
-                <button
-                  onClick={onOpenAdmin}
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-[#111622] hover:bg-[#FF5500] text-slate-300 hover:text-white text-[11px] font-mono transition-colors cursor-pointer border border-white/10"
-                >
-                  <Lock className="w-3 h-3 text-[#FF5500] hover:text-white" />
-                  <span>Admin Panel Login</span>
-                </button>
+              <li className="pt-1">
+                <div className="text-[11px] text-slate-400 font-mono">Basecamp Location:</div>
+                <div className="text-white font-medium">Pune, Maharashtra, Bharat</div>
               </li>
             </ul>
           </div>
 
         </div>
 
-        {/* Bottom Disclaimer */}
+        {/* Bottom Disclaimer & Discreet Admin Access */}
         <div className="mt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
           <div>
-            &copy; 2012–2026 {footerLogo.text || '8MOTO BHARAT'}. All rights reserved.
+            &copy; 2012–2026 {footerLogo.text || '8MOTO BHARAT'}. Official Off-Road Expeditions & Riding Academy.
           </div>
+          
           <div className="flex items-center gap-4 text-slate-400">
             <span>Powered by GoDaddy Node.js Hosting</span>
-            <button onClick={onOpenAdmin} className="text-[#FF5500] hover:underline cursor-pointer">
-              Admin Portal
+            <span className="text-slate-600">|</span>
+            <button
+              onClick={onOpenAdmin}
+              className="text-slate-400 hover:text-[#FF4D00] flex items-center gap-1.5 transition-colors cursor-pointer"
+              title="Marshal Backend Portal"
+            >
+              <Lock className="w-3 h-3 text-slate-400" />
+              <span>Admin Portal</span>
             </button>
           </div>
         </div>
