@@ -4,11 +4,14 @@ import {
   Compass, BarChart3, CheckCircle2, AlertCircle, RefreshCw, Eye, ExternalLink, Mail
 } from 'lucide-react';
 import { adminLogin, updateSettings, createExpedition, updateExpedition, deleteExpedition, fetchInquiries } from '../services/api';
+import Captcha from './Captcha';
 
 export default function AdminPanel({ isOpen, onClose, settings, expeditions, onRefreshData }) {
   const [token, setToken] = useState(() => localStorage.getItem('8moto_admin_token') || '');
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState('');
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+  const [captchaError, setCaptchaError] = useState(false);
   const [activeTab, setActiveTab] = useState('general'); // general, hero, socials, expeditions, telemetry, inquiries
   
   // Local state for editable settings
@@ -39,6 +42,10 @@ export default function AdminPanel({ isOpen, onClose, settings, expeditions, onR
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoginError('');
+    if (!captchaVerified) {
+      setCaptchaError(true);
+      return;
+    }
     const res = await adminLogin(password);
     if (res.success) {
       setToken(res.token);
@@ -219,6 +226,18 @@ export default function AdminPanel({ isOpen, onClose, settings, expeditions, onR
                 <div className="text-[11px] text-slate-500 font-mono mt-1.5">
                   Default passkey: <code className="text-[#FF5500]">8moto2026</code>
                 </div>
+              </div>
+
+              {/* Security Captcha */}
+              <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-left">
+                <Captcha
+                  onVerify={(isValid) => {
+                    setCaptchaVerified(isValid);
+                    if (isValid) setCaptchaError(false);
+                  }}
+                  hasError={captchaError}
+                  resetTrigger={isOpen}
+                />
               </div>
 
               <button

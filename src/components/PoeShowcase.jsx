@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Flame, Calendar, MapPin, Trophy, ShieldCheck, CheckCircle2, ChevronRight, AlertTriangle, ArrowRight, Gauge } from 'lucide-react';
+import { Flame, Calendar, MapPin, ShieldCheck, CheckCircle2, ChevronRight, AlertTriangle, ArrowRight } from 'lucide-react';
 
 export default function PoeShowcase({ expeditions, onOpenExpedition, onOpenRegistration }) {
   const [activeStageIdx, setActiveStageIdx] = useState(0);
@@ -56,7 +56,7 @@ export default function PoeShowcase({ expeditions, onOpenExpedition, onOpenRegis
               PUNE OFFROAD EXPEDITION <span className="text-[#FF4D00]">(POE 14)</span>
             </h2>
             <p className="mt-3 text-slate-300 max-w-2xl text-base sm:text-lg font-light leading-relaxed">
-              Founded in 2012 by off-road veteran <span className="text-white font-medium">Sangram Devekar Patil</span>, POE is Maharashtra's ultimate monsoon crucible. Dual-sport ADVs, dirt bikes, and battle-prepped 4x4 rigs push their limits side-by-side.
+              Founded in 2012, POE is Maharashtra's ultimate annual monsoon raid. Dual-sport ADVs, hard enduro machines, and battle-prepped 4x4 rigs push their limits side-by-side through unyielding terrain.
             </p>
           </div>
 

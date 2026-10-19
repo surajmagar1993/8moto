@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, Calendar, MapPin, Mountain, ShieldCheck, CheckCircle2, MessageSquare, Send, ArrowRight } from 'lucide-react';
 import { submitInquiry } from '../services/api';
+import Captcha from './Captcha';
 
 export default function ExpeditionModal({ expedition, isOpen, onClose, whatsappNumber = '919822086686', onOpenRegistration }) {
   const [formData, setFormData] = useState({
@@ -11,6 +12,8 @@ export default function ExpeditionModal({ expedition, isOpen, onClose, whatsappN
   });
   const [submitted, setSubmitted] = useState(false);
   const [isSending, setIsSending] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+  const [captchaError, setCaptchaError] = useState(false);
 
   if (!isOpen || !expedition) return null;
 
@@ -18,6 +21,10 @@ export default function ExpeditionModal({ expedition, isOpen, onClose, whatsappN
     e.preventDefault();
     if (!formData.name || !formData.phone) {
       alert('Please enter your name and phone number');
+      return;
+    }
+    if (!captchaVerified) {
+      setCaptchaError(true);
       return;
     }
 
@@ -220,6 +227,18 @@ export default function ExpeditionModal({ expedition, isOpen, onClose, whatsappN
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         className="w-full px-3 py-2 rounded-xl bg-[#111622] border border-white/10 text-white text-xs focus:border-[#FF4D00] focus:outline-none"
+                      />
+                    </div>
+
+                    {/* Anti-Spam Security Captcha */}
+                    <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                      <Captcha
+                        onVerify={(isValid) => {
+                          setCaptchaVerified(isValid);
+                          if (isValid) setCaptchaError(false);
+                        }}
+                        hasError={captchaError}
+                        resetTrigger={isOpen}
                       />
                     </div>
 

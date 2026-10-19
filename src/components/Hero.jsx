@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flame, Compass, MapPin, ShieldCheck, GraduationCap, ArrowRight, Ticket } from 'lucide-react';
+import { Flame, MapPin, ShieldCheck, GraduationCap, ArrowRight, Ticket } from 'lucide-react';
 
 export default function Hero({ settings, onOpenRegistration }) {
   const hero = settings?.hero || {

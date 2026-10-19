@@ -90,10 +90,10 @@ export default function FaqSection() {
         <div className="mt-12 p-6 rounded-2xl bg-[#0E131C] border border-white/10 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-left">
             <div className="text-sm font-bold text-white font-mono">HAVE A SPECIFIC RIG OR GROUP INQUIRY?</div>
-            <div className="text-xs text-slate-400 font-mono mt-0.5">Direct line to Sangram Patil & 8Moto Trail Marshals in Pune</div>
+            <div className="text-xs text-slate-400 font-mono mt-0.5">Direct line to 8Moto Trail Marshals at Pune Basecamp</div>
           </div>
           <a
-            href="https://wa.me/919822086686?text=Hi%20Sangram%20and%208Moto%20team!%20I%20have%20questions%20about%20joining%20the%20trails."
+            href="https://wa.me/919822086686?text=Hi%208Moto%20team!%20I%20have%20questions%20about%20joining%20the%20trails."
             target="_blank"
             rel="noreferrer"
             className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-mono font-bold tracking-wider transition-all flex items-center gap-2 shrink-0"

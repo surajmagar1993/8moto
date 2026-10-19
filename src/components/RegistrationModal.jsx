@@ -3,6 +3,7 @@ import { X, CheckCircle2, QrCode, ShieldCheck, ArrowRight, MessageSquare, Ticket
 import confetti from 'canvas-confetti';
 import { EXPEDITIONS } from '../data/mockData';
 import { submitInquiry } from '../services/api';
+import Captcha from './Captcha';
 
 export default function RegistrationModal({ isOpen, onClose, defaultExpeditionId }) {
   const [selectedExp, setSelectedExp] = useState(defaultExpeditionId || 'poe-2026');
@@ -20,6 +21,8 @@ export default function RegistrationModal({ isOpen, onClose, defaultExpeditionId
   const [isSuccess, setIsSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [passCode, setPassCode] = useState('');
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+  const [captchaError, setCaptchaError] = useState(false);
 
   if (!isOpen) return null;
 
@@ -33,6 +36,10 @@ export default function RegistrationModal({ isOpen, onClose, defaultExpeditionId
     }
     if (!formData.agreedTerms) {
       alert('Please accept the trail safety waiver.');
+      return;
+    }
+    if (!captchaVerified) {
+      setCaptchaError(true);
       return;
     }
 
@@ -226,6 +233,18 @@ export default function RegistrationModal({ isOpen, onClose, defaultExpeditionId
                   className="w-full px-3 py-2 rounded-xl bg-[#07090E] border border-white/10 text-white text-xs focus:border-[#FF4D00] focus:outline-none"
                 />
               </div>
+            </div>
+
+            {/* Anti-Spam Security Captcha */}
+            <div className="p-3.5 rounded-xl bg-white/5 border border-white/10">
+              <Captcha
+                onVerify={(isValid) => {
+                  setCaptchaVerified(isValid);
+                  if (isValid) setCaptchaError(false);
+                }}
+                hasError={captchaError}
+                resetTrigger={isOpen}
+              />
             </div>
 
             {/* Safety Waiver Checkbox */}

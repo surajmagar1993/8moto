@@ -7,7 +7,7 @@ import AcademySection from './components/AcademySection';
 import TrailMatrix from './components/TrailMatrix';
 import SafetySweeps from './components/SafetySweeps';
 import MachinePrepGuide from './components/MachinePrepGuide';
-import FounderTestimonials from './components/FounderTestimonials';
+import RiderTestimonials from './components/RiderTestimonials';
 import FaqSection from './components/FaqSection';
 import Footer from './components/Footer';
 import AdminPanel from './components/AdminPanel';
@@ -123,8 +123,8 @@ export default function App() {
         {/* Rig Scrutineering & Tire PSI Field Guide */}
         <MachinePrepGuide />
 
-        {/* Founder Sangram Devekar Patil & Community Testimonials */}
-        <FounderTestimonials />
+        {/* Verified Rider Community Testimonials */}
+        <RiderTestimonials />
 
         {/* Trail Regulations & FAQ */}
         <FaqSection />

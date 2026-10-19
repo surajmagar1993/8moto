@@ -68,8 +68,8 @@ export default function Navbar({ settings, onOpenRegistration }) {
               <Wrench className="w-3.5 h-3.5 text-slate-400" />
               <span>RIG PREP</span>
             </a>
-            <a href="#founder" className="hover:text-[#FF4D00] transition-colors py-1">
-              <span>FOUNDER</span>
+            <a href="#community" className="hover:text-[#FF4D00] transition-colors py-1">
+              <span>COMMUNITY</span>
             </a>
             <a href="#faq" className="hover:text-[#FF4D00] transition-colors py-1">
               <span>FAQ</span>
@@ -162,11 +162,11 @@ export default function Navbar({ settings, onOpenRegistration }) {
               <span>Rig Prep & Tire PSI Guide</span>
             </a>
             <a 
-              href="#founder" 
+              href="#community" 
               onClick={() => setMobileMenuOpen(false)}
               className="text-slate-300 hover:text-[#FF4D00] py-1.5"
             >
-              Founder & Trail Heritage
+              Rider Community Reviews
             </a>
             <a 
               href="#faq" 

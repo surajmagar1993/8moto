@@ -157,8 +157,8 @@ export default function Footer({ settings, onOpenAdmin }) {
                 <span className="font-mono">{settings?.email || 'expeditions@8moto.in'}</span>
               </li>
               <li className="pt-2">
-                <div className="text-[11px] text-slate-400 font-mono">Head Marshal:</div>
-                <div className="text-white font-medium">{settings?.headMarshal || 'Sangram Devekar Patil'}</div>
+                <div className="text-[11px] text-slate-400 font-mono">Expedition Desk Hours:</div>
+                <div className="text-white font-medium">Mon–Sat • 09:00–19:00 IST</div>
               </li>
               <li className="pt-1">
                 <div className="text-[11px] text-slate-400 font-mono">Basecamp Location:</div>

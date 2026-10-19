@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { GraduationCap, CheckCircle2, ChevronRight, Calendar, Users, ShieldAlert, ArrowRight } from 'lucide-react';
+import { GraduationCap, CheckCircle2, ArrowRight } from 'lucide-react';
 import { ACADEMY_COURSES } from '../data/mockData';
 
 export default function AcademySection({ onOpenRegistration }) {

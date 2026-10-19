@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Wrench, Gauge, Shield, AlertTriangle, CheckCircle2, ChevronRight } from 'lucide-react';
+import { Wrench, Gauge, Shield, AlertTriangle, CheckCircle2 } from 'lucide-react';
 
 export default function MachinePrepGuide() {
   const [selectedRig, setSelectedRig] = useState('himalayan');
@@ -139,7 +139,7 @@ export default function MachinePrepGuide() {
               <AlertTriangle className="w-5 h-5 text-[#FF4D00] shrink-0 mt-0.5" />
               <div>
                 <span className="font-bold text-[#FF4D00] font-mono text-[11px] block uppercase">
-                  HEAD MARSHAL TIP (SANGRAM PATIL):
+                  OFFICIAL MARSHAL TRAIL TIP:
                 </span>
                 <p className="mt-1 leading-relaxed text-slate-300 font-light">
                   "{rig.marshalTip}"
