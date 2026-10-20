@@ -7,7 +7,7 @@ import Captcha from './Captcha';
 
 export default function RegistrationModal({ isOpen, onClose, defaultExpeditionId }) {
   const [selectedExp, setSelectedExp] = useState(defaultExpeditionId || 'poe-2026');
-  const [category, setCategory] = useState('adv'); // adv, 4x4, academy
+  const [category, setCategory] = useState('adv'); // adv, enduro, 4x4
   const [formData, setFormData] = useState({
     name: '',
     phone: '',

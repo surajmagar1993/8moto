@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   X, Lock, Save, Plus, Trash2, Edit3, Film, Settings, Share2, 
-  Compass, BarChart3, CheckCircle2, AlertCircle, RefreshCw, Eye, ExternalLink, Mail
+  Compass, BarChart3, CheckCircle2, AlertCircle, RefreshCw, Mail
 } from 'lucide-react';
 import { adminLogin, updateSettings, createExpedition, updateExpedition, deleteExpedition, fetchInquiries } from '../services/api';
 import Captcha from './Captcha';

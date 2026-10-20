@@ -1,7 +1,7 @@
 import React from 'react';
-import { Radio, AlertTriangle, ShieldCheck, ChevronRight } from 'lucide-react';
+import { ShieldCheck, ChevronRight } from 'lucide-react';
 
-export default function TrailTicker({ onOpenExpedition, onOpenRegistration }) {
+export default function TrailTicker({ onOpenRegistration }) {
   return (
     <div className="bg-[#0B0F17] border-b border-white/10 text-xs font-mono py-2.5 px-4 overflow-hidden relative z-40">
       <div className="max-w-[1720px] mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">

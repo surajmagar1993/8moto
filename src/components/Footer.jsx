@@ -26,7 +26,7 @@ export default function Footer({ settings, onOpenAdmin }) {
   const footerLogo = settings?.footerLogo || {
     text: '8MOTO BHARAT',
     imageUrl: '',
-    description: "India's premier off-road motorsports expedition collective and riding academy based out of Pune, Maharashtra. Spearheading the annual Pune Offroad Expedition (POE) for 14 unbroken years."
+    description: "India's premier off-road motorsports expedition collective and trail organizer based out of Pune, Maharashtra. Spearheading the annual Pune Offroad Expedition (POE) for 14 unbroken years."
   };
 
   const socials = settings?.socials || {
@@ -118,7 +118,7 @@ export default function Footer({ settings, onOpenAdmin }) {
           {/* Quick Navigation Links */}
           <div>
             <div className="font-mono text-xs font-bold text-white uppercase tracking-wider mb-4">
-              EXPEDITIONS & ACADEMY
+              EXPEDITIONS & TRAILS
             </div>
             <ul className="space-y-2.5 text-xs text-slate-300">
               <li>
@@ -131,10 +131,10 @@ export default function Footer({ settings, onOpenAdmin }) {
                 <a href="#expeditions" className="hover:text-[#FF4D00] transition-colors">Konkan Riverbed Raid</a>
               </li>
               <li>
-                <a href="#academy" className="hover:text-[#FF4D00] transition-colors">ADV Motorcycle Dynamics (Level 1)</a>
+                <a href="#safety" className="hover:text-[#FF4D00] transition-colors">Winch Sweeps & Paramedic Protocol</a>
               </li>
               <li>
-                <a href="#academy" className="hover:text-[#FF4D00] transition-colors">4x4 Winch Engineering (Level 2)</a>
+                <a href="#community" className="hover:text-[#FF4D00] transition-colors">Rider Community Reviews</a>
               </li>
               <li>
                 <a href="#rig-prep" className="hover:text-[#FF4D00] transition-colors">Machine Setup & Tire PSI Guide</a>
@@ -172,7 +172,7 @@ export default function Footer({ settings, onOpenAdmin }) {
         {/* Bottom Disclaimer & Discreet Admin Access */}
         <div className="mt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
           <div>
-            &copy; 2012–2026 {footerLogo.text || '8MOTO BHARAT'}. Official Off-Road Expeditions & Riding Academy.
+            &copy; 2012–2026 {footerLogo.text || '8MOTO BHARAT'}. Official Off-Road Expeditions & Trail Collective.
           </div>
           
           <div className="flex items-center gap-4 text-slate-400">

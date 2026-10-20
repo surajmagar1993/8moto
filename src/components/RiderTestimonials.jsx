@@ -1,5 +1,5 @@
 import React from 'react';
-import { Quote, CheckCircle2, Star, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, Star, ShieldCheck } from 'lucide-react';
 import { TESTIMONIALS } from '../data/mockData';
 
 export default function RiderTestimonials() {
@@ -18,7 +18,7 @@ export default function RiderTestimonials() {
               RIDERS WHO CONQUERED <span className="text-[#FF4D00]">THE SAHYADRI</span>
             </h2>
             <p className="mt-3 text-slate-300 max-w-2xl text-base sm:text-lg font-light leading-relaxed">
-              Real reviews from adventure motorcyclists and 4x4 drivers who tackled the Pune Offroad Expedition and completed certified training clinics.
+              Real reviews from adventure motorcyclists and 4x4 drivers who tackled the Pune Offroad Expedition and extreme Sahyadri trail traverses.
             </p>
           </div>
 

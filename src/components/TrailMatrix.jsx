@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Compass, Mountain, MapPin, ChevronRight, Video, Gauge, ArrowRight } from 'lucide-react';
+import { Compass, Mountain, MapPin, ChevronRight } from 'lucide-react';
 
 export default function TrailMatrix({ expeditions, onOpenExpedition, onOpenRegistration }) {
   const [filterDifficulty, setFilterDifficulty] = useState('all');

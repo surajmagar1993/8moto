@@ -1,6 +1,6 @@
-# 8MOTO BHARAT — Extreme Off-Road Expeditions & Riding Academy
+# 8MOTO BHARAT — Extreme Off-Road Expeditions & Trail Collective
 
-> Official web platform and backend management system for **8Moto Bharat** — organizers of the legendary **Pune Offroad Expedition (POE)**, founded by off-road veteran **Sangram Devekar Patil**.
+> Official web platform and backend management system for **8Moto Bharat** — organizers of the legendary **Pune Offroad Expedition (POE)** and Sahyadri overland trail tours.
 
 ---
 
@@ -9,7 +9,6 @@
 - **Kinetic Hero with Dynamic Video Background**: Switch seamlessly between loopable MP4/WebM trail video and high-resolution action photos directly from the admin panel.
 - **Flagship POE Spotlight**: Multi-stage breakdown of the annual Pune Offroad Expedition (Red Mud Gully, Boulder Bed, Fogline Incline).
 - **Interactive Trail Matrix**: Filterable expedition matrix graded by technical difficulty (🟢 Level 1 Novice, 🟡 Level 2 Moderate, 🔴 Level 3 Extreme Hard Enduro & 4x4).
-- **8Moto Off-Road Academy**: Specialized training modules for adventure motorcycles (Himalayan, KTM 390, BMW GS) and 4x4 overland recovery/winching.
 - **Zero-Compromise Safety Fleet**: Dedicated trauma paramedic support, heavy-duty 4x4 recovery sweep vehicles with 12,000lb Warn winches, and VHF radio grid.
 - **Backend Admin Control Center**: Password-protected administrative panel (`8moto2026`) for managing:
   - Header & Footer logos and brand text

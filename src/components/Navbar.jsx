@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Compass, Flame, Shield, Wrench, GraduationCap, MessageSquare, Ticket } from 'lucide-react';
+import { Menu, X, Compass, Flame, Shield, Wrench, MessageSquare, Ticket } from 'lucide-react';
 
 export default function Navbar({ settings, onOpenRegistration }) {
   const [scrolled, setScrolled] = useState(false);
@@ -15,7 +15,7 @@ export default function Navbar({ settings, onOpenRegistration }) {
 
   const headerLogo = settings?.headerLogo || {
     text: '8MOTO BHARAT',
-    subtitle: 'EXPEDITIONS & RIDING ACADEMY • PUNE',
+    subtitle: 'EXPEDITIONS & TRAIL COLLECTIVE • PUNE',
     imageUrl: ''
   };
 
@@ -41,7 +41,7 @@ export default function Navbar({ settings, onOpenRegistration }) {
                 {headerLogo.text || '8MOTO BHARAT'}
               </span>
               <span className="text-[10px] tracking-widest uppercase text-slate-400 font-mono font-semibold mt-0.5">
-                {headerLogo.subtitle || 'EXPEDITIONS & ACADEMY • PUNE'}
+                {headerLogo.subtitle || 'EXPEDITIONS & TRAILS • PUNE'}
               </span>
             </div>
           </a>
@@ -55,10 +55,6 @@ export default function Navbar({ settings, onOpenRegistration }) {
             <a href="#expeditions" className="hover:text-[#FF4D00] transition-colors flex items-center gap-1.5 py-1">
               <Compass className="w-3.5 h-3.5 text-slate-400" />
               <span>TRAIL MATRIX</span>
-            </a>
-            <a href="#academy" className="hover:text-[#FF4D00] transition-colors flex items-center gap-1.5 py-1">
-              <GraduationCap className="w-3.5 h-3.5 text-slate-400" />
-              <span>ACADEMY</span>
             </a>
             <a href="#safety" className="hover:text-[#FF4D00] transition-colors flex items-center gap-1.5 py-1">
               <Shield className="w-3.5 h-3.5 text-slate-400" />
@@ -136,14 +132,6 @@ export default function Navbar({ settings, onOpenRegistration }) {
             >
               <Compass className="w-4 h-4 text-slate-400" />
               <span>Expeditions & Trail Matrix</span>
-            </a>
-            <a 
-              href="#academy" 
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-slate-300 hover:text-[#FF4D00] py-1.5 flex items-center gap-2"
-            >
-              <GraduationCap className="w-4 h-4 text-slate-400" />
-              <span>8Moto Riding & 4x4 Academy</span>
             </a>
             <a 
               href="#safety" 

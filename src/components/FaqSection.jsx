@@ -23,7 +23,7 @@ export default function FaqSection() {
     },
     {
       q: "I am a beginner or intermediate rider. Is POE too extreme for me?",
-      a: "POE 14 is a demanding technical expedition. If this is your very first time riding off-road, we strongly recommend attending the 8Moto Riding Academy (Level 1 ADV Dynamics) first at our Panshet training grounds. For moderate riders, our marshals provide spotter guidance at every tricky gully and river crossing."
+      a: "POE 14 is a demanding technical expedition. If this is your very first time riding off-road, we recommend starting with our beginner-friendly weekend trail runs or joining as a co-passenger/spotter to build trail awareness before tackling the core monsoon stages. For moderate riders, our marshals provide spotter guidance at every tricky gully and river crossing."
     },
     {
       q: "What are the food, stay, and camping arrangements during POE?",

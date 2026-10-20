@@ -104,7 +104,7 @@ export const EXPEDITIONS = [
     terrain: "Lakeside Mud, Grassy Hills, Light Gravel",
     dates: "Every Alternate Sunday",
     seatsLeft: 19,
-    image: "/images/academy_training.jpg",
+    image: "/images/poe_expedition.jpg",
     price: "₹2,199",
     category: ["ADV Motorcycle", "Stock 4x4 / AWD"],
     description: "The ideal gateway into trail riding. Guided by certified 8Moto marshals, this relaxed expedition teaches throttle control, tire air-down strategies, and safe water crossing.",
@@ -115,53 +115,7 @@ export const EXPEDITIONS = [
   }
 ];
 
-export const ACADEMY_COURSES = [
-  {
-    id: "adv-level-1",
-    level: "Level 01",
-    title: "ADV Motorcycle Dynamics & Control",
-    tag: "For Himalayan, KTM 390, BMW GS, Xpulse",
-    duration: "1 Day Intensive (8 Hours)",
-    price: "₹4,999",
-    badge: "Most Popular",
-    highlights: [
-      "Ergonomics: Peg standing, knee gripping, arm relax posture",
-      "Clutch slipping & slow-speed tight radius balance",
-      "Threshold rear-wheel lockup & counter-steering slides",
-      "Safely picking up a 220kg dropped adventure bike solo"
-    ]
-  },
-  {
-    id: "4x4-recovery",
-    level: "Level 02",
-    title: "4x4 Technical Crawl & Winch Engineering",
-    tag: "For Thar, Gypsy, Jimny, Hilux, Gurkha",
-    duration: "2 Days Masterclass",
-    price: "₹8,499",
-    badge: "Essential Overlanding",
-    highlights: [
-      "Low-range 4L gearbox modulation & diff lock mastery",
-      "Spotter hand signals & precision tire placement",
-      "High-tonnage kinetic rope recovery & tree-trunk winch rigging",
-      "Tire pressure deflation science for deep mud & sand"
-    ]
-  },
-  {
-    id: "hard-enduro-pro",
-    level: "Level 03",
-    title: "Hard Enduro & Obstacle Mastery",
-    tag: "For Dirt Bikes & Modified Enduros",
-    duration: "1.5 Days Track & Forest Clinic",
-    price: "₹7,299",
-    badge: "Pro Riders",
-    highlights: [
-      "Static balance & front-wheel lift over logs & steps",
-      "Dynamic clutch pop for steep rock face launches",
-      "Switchback pivot turns on steep downhill hairpins",
-      "Survival mechanical fixes: chain repair & puncture plugs"
-    ]
-  }
-];
+export const ACADEMY_COURSES = [];
 
 export const SAFETY_PILLARS = [
   {
@@ -205,11 +159,11 @@ export const MEDIA_GALLERY = [
   },
   {
     id: 3,
-    title: "8Moto Academy: Sahyadri Clinic",
-    type: "Masterclass",
-    category: "Academy",
-    image: "/images/academy_training.jpg",
-    caption: "Mastering balance and throttle discipline high on the Western Ghats plateau."
+    title: "Sahyadri Ridge Recon Traverse",
+    type: "Photo Reel",
+    category: "Trail Recon",
+    image: "/images/poe_expedition.jpg",
+    caption: "Navigating rocky shelf switchbacks and riverbed approaches high on the Western Ghats."
   }
 ];
 
@@ -259,13 +213,13 @@ export const TESTIMONIALS = [
     name: "Rohan Deshmukh",
     rig: "Mahindra Thar 4x4 CRDe",
     role: "Off-Road Driver & Member",
-    comment: "Sangram and the 8Moto crew don't do fake off-roading. They take you into raw, untamed terrain where recovery gear and trail discipline actually matter. Their safety and medical coverage gives you the confidence to push your machine."
+    comment: "The 8Moto marshal crew doesn't do fake off-roading. They take you into raw, untamed terrain where recovery gear and trail discipline actually matter. Their safety and medical coverage gives you the confidence to push your machine."
   },
   {
     name: "Neha Varma",
     rig: "KTM 390 Adventure",
-    role: "Academy Graduate",
-    comment: "I was terrified of deep mud and stalling on rocky inclines. One day at the 8Moto Riding Academy completely transformed my confidence. I now lead weekend trail rides with zero panic."
+    role: "Monsoon Trail Rider",
+    comment: "I was terrified of deep mud and stalling on rocky inclines. Joining the 8Moto monsoon trail convoy completely transformed my riding confidence. The marshals guided our tire placement at every riverbed, and now I ride Sahyadri trails with zero panic."
   }
 ];
 

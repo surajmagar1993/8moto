@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flame, MapPin, ShieldCheck, GraduationCap, ArrowRight, Ticket } from 'lucide-react';
+import { Flame, MapPin, ShieldCheck, Compass, ArrowRight, Ticket } from 'lucide-react';
 
 export default function Hero({ settings, onOpenRegistration }) {
   const hero = settings?.hero || {
@@ -9,7 +9,7 @@ export default function Hero({ settings, onOpenRegistration }) {
     titleLine1: 'THE MONSOON CRUCIBLE',
     titleHighlight: 'OF INDIA.',
     titleLine2: '',
-    subtitle: '14 unbroken years of charting treacherous red clay trenches, submerged riverbed boulders, and vertical Sahyadri ridges. Home of the Pune Offroad Expedition (POE) and premier ADV & 4x4 training academy.',
+    subtitle: '14 unbroken years of charting treacherous red clay trenches, submerged riverbed boulders, and vertical Sahyadri ridges. Home of the Pune Offroad Expedition (POE) and premier Sahyadri overland trail tours.',
     editionBadge: 'EDITION 14 CONFIRMED • AUG 15-16, 2026',
     locationBadge: 'LAVASA • MULSHI • VARANDHA GHATS'
   };
@@ -76,7 +76,7 @@ export default function Hero({ settings, onOpenRegistration }) {
 
           {/* Authentic Authoritative Subtitle */}
           <p className="mt-5 sm:mt-6 text-base sm:text-lg md:text-xl text-slate-200 font-normal leading-relaxed max-w-3xl drop-shadow">
-            {hero.subtitle || '14 unbroken years of charting treacherous red clay trenches, submerged riverbed boulders, and vertical Sahyadri ridges. Home of the Pune Offroad Expedition (POE) and premier ADV & 4x4 training academy.'}
+            {hero.subtitle || '14 unbroken years of charting treacherous red clay trenches, submerged riverbed boulders, and vertical Sahyadri ridges. Home of the Pune Offroad Expedition (POE) and premier Sahyadri overland trail tours.'}
           </p>
 
           {/* Action CTAs */}
@@ -99,11 +99,11 @@ export default function Hero({ settings, onOpenRegistration }) {
             </button>
 
             <a
-              href="#academy"
+              href="#expeditions"
               className="px-5 sm:px-7 py-3.5 sm:py-4 rounded-xl bg-black/40 hover:bg-black/60 border border-white/15 text-slate-300 hover:text-white font-mono text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all cursor-pointer flex items-center gap-2"
             >
-              <GraduationCap className="w-4 h-4 text-amber-400" />
-              <span>RIDING ACADEMY</span>
+              <Compass className="w-4 h-4 text-amber-400" />
+              <span>TRAIL EXPEDITIONS</span>
             </a>
           </div>
 

@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import TrailTicker from './components/TrailTicker';
 import Hero from './components/Hero';
 import PoeShowcase from './components/PoeShowcase';
-import AcademySection from './components/AcademySection';
 import TrailMatrix from './components/TrailMatrix';
 import SafetySweeps from './components/SafetySweeps';
 import MachinePrepGuide from './components/MachinePrepGuide';
@@ -79,7 +78,6 @@ export default function App() {
       
       {/* Live Recon Bulletin Bar */}
       <TrailTicker 
-        onOpenExpedition={(exp) => setActiveExpedition(exp)}
         onOpenRegistration={() => handleOpenRegistration('poe-2026')}
       />
 
@@ -103,11 +101,6 @@ export default function App() {
           expeditions={expeditions}
           onOpenExpedition={(exp) => setActiveExpedition(exp)}
           onOpenRegistration={() => handleOpenRegistration('poe-2026')}
-        />
-
-        {/* 8Moto Riding & 4x4 Academy */}
-        <AcademySection 
-          onOpenRegistration={() => handleOpenRegistration('adv-level-1')}
         />
 
         {/* Trail & Expedition Matrix (Western Ghats & Sahyadri) */}
